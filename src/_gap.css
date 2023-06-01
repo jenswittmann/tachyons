@@ -1,0 +1,73 @@
+/* Variables */
+
+:root {
+  --spacing-0: 0;
+  --spacing-1: .25rem;
+  --spacing-2: .5rem;
+  --spacing-3: 1rem;
+  --spacing-4: 2rem;
+  --spacing-5: 4rem;
+  --spacing-6: 8rem;
+  --spacing-7: 16rem;
+  --spacing-8: 32rem;
+}
+
+/*
+   GAP: GRID AND FLEX SPACING
+   Docs: http://tachyons.io/docs/layout/gap/
+
+   Base:
+     g = gap
+
+
+   Media Query Extensions:
+     -s = small
+     -m  = medium
+     -l  = large
+
+*/
+
+
+.g0 { gap: var(--spacing-0); }
+.g1 { gap: var(--spacing-1); }
+.g2 { gap: var(--spacing-2); }
+.g3 { gap: var(--spacing-3); }
+.g4 { gap: var(--spacing-4); }
+.g5 { gap: var(--spacing-5); }
+.g6 { gap: var(--spacing-6); }
+.g7 { gap: var(--spacing-7); }
+
+@media (--breakpoint-small) {
+  .g0-s { gap: var(--spacing-0); }
+  .g1-s { gap: var(--spacing-1); }
+  .g2-s { gap: var(--spacing-2); }
+  .g3-s { gap: var(--spacing-3); }
+  .g4-s { gap: var(--spacing-4); }
+  .g5-s { gap: var(--spacing-5); }
+  .g6-s { gap: var(--spacing-6); }
+  .g7-s { gap: var(--spacing-7); }
+}
+
+@media (--breakpoint-medium) {
+  .g0-m { gap: var(--spacing-0); }
+  .g1-m { gap: var(--spacing-1); }
+  .g2-m { gap: var(--spacing-2); }
+  .g3-m { gap: var(--spacing-3); }
+  .g4-m { gap: var(--spacing-4); }
+  .g5-m { gap: var(--spacing-5); }
+  .g6-m { gap: var(--spacing-6); }
+  .g7-m { gap: var(--spacing-7); }
+}
+
+
+@media (--breakpoint-large) {
+  .g0-l { gap: var(--spacing-0); }
+  .g1-l { gap: var(--spacing-1); }
+  .g2-l { gap: var(--spacing-2); }
+  .g3-l { gap: var(--spacing-3); }
+  .g4-l { gap: var(--spacing-4); }
+  .g5-l { gap: var(--spacing-5); }
+  .g6-l { gap: var(--spacing-6); }
+  .g7-l { gap: var(--spacing-7); }
+}
+
