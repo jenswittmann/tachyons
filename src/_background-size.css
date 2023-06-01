@@ -15,8 +15,8 @@
   on an html element.
 */
 
-  .cover { background-size: cover!important; }
-  .contain { background-size: contain!important; }
+.cover { background-size: cover!important; }
+.contain { background-size: contain!important; }
 
 @media (--breakpoint-small) {
   .cover-s { background-size: cover!important; }

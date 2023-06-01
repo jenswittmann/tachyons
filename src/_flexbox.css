@@ -36,15 +36,13 @@
   }
   .flex-none-s { flex: none; }
 
-
-
-
   .flex-grow-0-s { flex-grow: 0; }
   .flex-grow-1-s { flex-grow: 1; }
 
   .flex-shrink-0-s { flex-shrink: 0; }
   .flex-shrink-1-s { flex-shrink: 1; }
 }
+
 @media (--breakpoint-medium) {
   .flex-m { display: flex; }
   .inline-flex-m { display: inline-flex; }
