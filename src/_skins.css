@@ -411,6 +411,7 @@
 .cyan-9 { color: var( --cyan-9); }
 .cyan-10 { color: var( --cyan-10); }
 .cyan-11 { color: var( --cyan-11); }
+.white { color: white; }
 
 /* Background colors */
 
@@ -606,4 +607,5 @@
 .bg-cyan-9 { background-color: var( --cyan-9); }
 .bg-cyan-10 { background-color: var( --cyan-10); }
 .bg-cyan-11 { background-color: var( --cyan-11); }
+.bg-white { background-color: white; }
 
