@@ -5,7 +5,6 @@
 
 */
 
-
 .sans-serif {
   font-family: -apple-system, BlinkMacSystemFont,
                'avenir next', avenir,
@@ -39,47 +38,3 @@ code, .code {
                monaco,
                monospace;
 }
-
-.courier {
-  font-family: 'Courier Next',
-               courier,
-               monospace;
-}
-
-
-/* Sans-Serif Typefaces */
-
-.helvetica {
-  font-family: 'helvetica neue', helvetica,
-               sans-serif;
-}
-
-
-/* Serif Typefaces */
-
-.athelas {
-  font-family: athelas,
-               georgia,
-               serif;
-}
-
-.georgia {
-  font-family: georgia,
-               serif;
-}
-
-.times {
-  font-family: times,
-               serif;
-}
-
-.garamond {
-  font-family: garamond,
-               serif;
-}
-
-.baskerville {
-  font-family: baskerville,
-               serif;
-}
-
