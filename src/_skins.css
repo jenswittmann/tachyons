@@ -608,4 +608,5 @@
 .bg-cyan-10 { background-color: var( --cyan-10); }
 .bg-cyan-11 { background-color: var( --cyan-11); }
 .bg-white { background-color: white; }
+.bg-transparent { background-color: transparent; }
 
