@@ -13,9 +13,9 @@
 .flow-column { grid-auto-flow: column; }
 .flow-dense { grid-auto-flow: dense; }
 
-
 @media (--breakpoint-small) {
 }
+
 @media (--breakpoint-medium) {
 }
 
