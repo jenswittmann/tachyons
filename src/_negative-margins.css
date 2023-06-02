@@ -125,7 +125,7 @@
 
 }
 
-@media (--breakpoint-mediun) {
+@media (--breakpoint-medium) {
   .na1-m { margin: calc(-1 * var(--spacing-1)); }
   .na2-m { margin: calc(-1 * var(--spacing-2)); }
   .na3-m { margin: calc(-1 * var(--spacing-3)); }
