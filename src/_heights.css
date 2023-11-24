@@ -55,6 +55,9 @@
 
 .min-vh-100 { min-height: 100vh; }
 
+/* Dynamic Screen Height Percentage */
+
+.dvh-100 { height: 100dvh; }
 
 /* String Properties */
 
@@ -76,6 +79,7 @@
   .vh-75-s {  height:  75vh; }
   .vh-100-s { height: 100vh; }
   .min-vh-100-s { min-height: 100vh; }
+  .dvh-100-s { height: 100dvh; }
   .h-auto-s { height: auto; }
   .h-inherit-s { height: inherit; }
 }
@@ -95,6 +99,7 @@
   .vh-75-m {  height:  75vh; }
   .vh-100-m { height: 100vh; }
   .min-vh-100-m { min-height: 100vh; }
+  .dvh-100-m { height: 100dvh; }
   .h-auto-m { height: auto; }
   .h-inherit-m { height: inherit; }
 }
@@ -114,6 +119,7 @@
   .vh-75-l {  height:  75vh; }
   .vh-100-l { height: 100vh; }
   .min-vh-100-l { min-height: 100vh; }
+  .dvh-100-l { height: 100dvh; }
   .h-auto-l { height: auto; }
   .h-inherit-l { height: inherit; }
 }
