@@ -1,8 +1,19 @@
+/* Variables */
+
+:root {
+  --border-radius-1: 4px;
+  --border-radius-2: 6px;
+  --border-radius-3: 8px;
+  --border-radius-4: 12px;
+  --border-radius-5: 16px;
+  --border-radius-6: 32px;
+  --border-radius-pill: 9999px;
+}
+
 /*
 
    BORDER RADIUS
    Docs: http://tachyons.io/docs/themes/border-radius/
-   Interactive examples: https://components.ai/u/system/cl7crcjia022509masfvq73ny/cl7ztbozs1650909l6rllmvpko
 
    Base:
      br   = border-radius
@@ -18,7 +29,7 @@
 
    Literal values:
      -100 = 100%
-     -pill = 9999px
+     -pill = var(--border-radius-pill);
 
    Media Query Extensions:
      -s = small
@@ -27,15 +38,15 @@
 
 */
 
-.br0 {        border-radius: 0; }
-.br1 {        border-radius: 4px; }
-.br2 {        border-radius: 6px; }
-.br3 {        border-radius: 8px; }
-.br4 {        border-radius: 12px; }
-.br5 {        border-radius: 16px; }
-.br6 {        border-radius: 32px; }
-.br-100 {     border-radius: 100%; }
-.br-pill {    border-radius: 9999px; }
+.br0 { border-radius: 0; }
+.br1 { border-radius: var(--border-radius-1); }
+.br2 { border-radius: var(--border-radius-2); }
+.br3 { border-radius: var(--border-radius-3); }
+.br4 { border-radius: var(--border-radius-4); }
+.br5 { border-radius: var(--border-radius-5); }
+.br6 { border-radius: var(--border-radius-6); }
+.br-100 { border-radius: 100%; }
+.br-pill { border-radius: var(--border-radius-pill); }
 
 .br--bottom {
     border-top-left-radius: 0;
@@ -58,15 +69,15 @@
 .br-unset { border-radius: unset; }
 
 @media (--breakpoint-small) {
-  .br0-s {     border-radius: 0; }
-  .br1-s {     border-radius: 4px; }
-  .br2-s {     border-radius: 6px; }
-  .br3-s {     border-radius: 8px; }
-  .br4-s {     border-radius: 12px; }
-  .br5-s {     border-radius: 16px; }
-  .br6-s {     border-radius: 32px; }
-  .br-100-s {  border-radius: 100%; }
-  .br-pill-s { border-radius: 9999px; }
+  .br0-s { border-radius: 0; }
+  .br1-s { border-radius: var(--border-radius-1); }
+  .br2-s { border-radius: var(--border-radius-2); }
+  .br3-s { border-radius: var(--border-radius-3); }
+  .br4-s { border-radius: var(--border-radius-4); }
+  .br5-s { border-radius: var(--border-radius-5); }
+  .br6-s { border-radius: var(--border-radius-6); }
+  .br-100-s { border-radius: 100%; }
+  .br-pill-s { border-radius: var(--border-radius-pill); }
   .br--bottom-s {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
@@ -89,15 +100,15 @@
 }
 
 @media (--breakpoint-medium) {
-  .br0-m {     border-radius: 0; }
-  .br1-m {     border-radius: 4px; }
-  .br2-m {     border-radius: 6px; }
-  .br3-m {     border-radius: 8px; }
-  .br4-m {     border-radius: 12px; }
-  .br5-m {  border-radius: 16px; }
-  .br6-m {  border-radius: 32px; }
-  .br-100-m {  border-radius: 100%; }
-  .br-pill-m { border-radius: 9999px; }
+  .br0-m { border-radius: 0; }
+  .br1-m { border-radius: var(--border-radius-1); }
+  .br2-m { border-radius: var(--border-radius-2); }
+  .br3-m { border-radius: var(--border-radius-3); }
+  .br4-m { border-radius: var(--border-radius-4); }
+  .br5-m { border-radius: var(--border-radius-5); }
+  .br6-m { border-radius: var(--border-radius-6); }
+  .br-100-m { border-radius: 100%; }
+  .br-pill-m { border-radius: var(--border-radius-pill); }
   .br--bottom-m {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
@@ -120,15 +131,15 @@
 }
 
 @media (--breakpoint-large) {
-  .br0-l {     border-radius: 0; }
-  .br1-l {     border-radius: 4px; }
-  .br2-l {     border-radius: 6px; }
-  .br3-l {     border-radius: 8px; }
-  .br4-l {     border-radius: 12px; }
-  .br5-l {     border-radius: 16px; }
-  .br6-l {     border-radius: 32px; }
-  .br-100-l {  border-radius: 100%; }
-  .br-pill-l { border-radius: 9999px; }
+  .br0-l { border-radius: 0; }
+  .br1-l { border-radius: var(--border-radius-1); }
+  .br2-l { border-radius: var(--border-radius-2); }
+  .br3-l { border-radius: var(--border-radius-3); }
+  .br4-l { border-radius: var(--border-radius-4); }
+  .br5-l { border-radius: var(--border-radius-5); }
+  .br6-l { border-radius: var(--border-radius-6); }
+  .br-100-l { border-radius: 100%; }
+  .br-pill-l { border-radius: var(--border-radius-pill); }
   .br--bottom-l {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
