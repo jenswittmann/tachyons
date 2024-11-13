@@ -11,183 +11,109 @@
  *    TABLE OF CONTENTS
  *
  *    1. External Library Includes
- *       - Normalize.css | http://normalize.css.github.io
+ *       - modern-normalize | https://github.com/sindresorhus/modern-normalize
  *    2. Tachyons Modules
  *    3. Variables
  *       - Media Queries
- *       - Colors
  *    4. Debugging
  *       - Debug all
  *       - Debug children
  *
  */
 /* External Library Includes */
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-/* Document
-   ========================================================================== */
+/*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
+/*
+Document
+========
+*/
 /**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-html { line-height: 1.15; /* 1 */ -webkit-text-size-adjust: 100%; /* 2 */ }
-/* Sections
-   ========================================================================== */
+Use a better box model (opinionated).
+*/
+*, ::before, ::after { box-sizing: border-box; }
+html {/* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */ font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'; line-height: 1.15; /* 1. Correct the line height in all browsers. */ -webkit-text-size-adjust: 100%; /* 2. Prevent adjustments of font size after orientation changes in iOS. */ -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; /* 3. Use a more readable tab size (opinionated). */ }
+/*
+Sections
+========
+*/
+body { margin: 0; /* Remove the margin in all browsers. */ }
+/*
+Text-level semantics
+====================
+*/
 /**
- * Remove the margin in all browsers.
- */
-body { margin: 0; }
-/**
- * Render the `main` element consistently in IE.
- */
-main { display: block; }
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
-h1 { font-size: 2em; margin: .67em 0; }
-/* Grouping content
-   ========================================================================== */
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-hr { box-sizing: content-box; /* 1 */ height: 0; /* 1 */ overflow: visible; /* 2 */ }
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-pre { font-family: monospace, monospace; /* 1 */ font-size: 1em; /* 2 */ }
-/* Text-level semantics
-   ========================================================================== */
-/**
- * Remove the gray background on active links in IE 10.
- */
-a { background-color: transparent; }
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-abbr[title] { border-bottom: none; /* 1 */ text-decoration: underline; /* 2 */ -webkit-text-decoration: underline dotted; text-decoration: underline dotted; /* 2 */ }
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
+Add the correct font weight in Chrome and Safari.
+*/
 b, strong { font-weight: bolder; }
 /**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-code, kbd, samp { font-family: monospace, monospace; /* 1 */ font-size: 1em; /* 2 */ }
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code, kbd, samp, pre { font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; /* 1 */ font-size: 1em; /* 2 */ }
 /**
- * Add the correct font size in all browsers.
- */
+Add the correct font size in all browsers.
+*/
 small { font-size: 80%; }
 /**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
 sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
 sub { bottom: -0.25em; }
 sup { top: -0.5em; }
-/* Embedded content
-   ========================================================================== */
+/*
+Tabular data
+============
+*/
 /**
- * Remove the border on images inside links in IE 10.
- */
-img { border-style: none; }
-/* Forms
-   ========================================================================== */
+Correct table border color inheritance in Chrome and Safari. (https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+table { border-color: currentcolor; }
+/*
+Forms
+=====
+*/
 /**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
 button, input, optgroup, select, textarea { font-family: inherit; /* 1 */ font-size: 100%; /* 1 */ line-height: 1.15; /* 1 */ margin: 0; /* 2 */ }
 /**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-button, input {/* 1 */ overflow: visible; }
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button, [type='button'], [type='reset'], [type='submit'] { -webkit-appearance: button; }
 /**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-button, select {/* 1 */ text-transform: none; }
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend { padding: 0; }
 /**
- * Correct the inability to style clickable types in iOS and Safari.
- */
-button, [type="button"], [type="reset"], [type="submit"] { -webkit-appearance: button; }
-/**
- * Remove the inner border and padding in Firefox.
- */
-button::-moz-focus-inner, [type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner { border-style: none; padding: 0; }
-/**
- * Restore the focus styles unset by the previous rule.
- */
-button:-moz-focusring, [type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring { outline: 1px dotted ButtonText; }
-/**
- * Correct the padding in Firefox.
- */
-fieldset { padding: .35em .75em .625em; }
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
-legend { box-sizing: border-box; /* 1 */ color: inherit; /* 2 */ display: table; /* 1 */ max-width: 100%; /* 1 */ padding: 0; /* 3 */ white-space: normal; /* 1 */ }
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
+Add the correct vertical alignment in Chrome and Firefox.
+*/
 progress { vertical-align: baseline; }
 /**
- * Remove the default vertical scrollbar in IE 10+.
- */
-textarea { overflow: auto; }
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button { height: auto; }
 /**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-[type="checkbox"], [type="radio"] { box-sizing: border-box; /* 1 */ padding: 0; /* 2 */ }
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type='search'] { -webkit-appearance: textfield; /* 1 */ outline-offset: -2px; /* 2 */ }
 /**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button { height: auto; }
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration { -webkit-appearance: none; }
 /**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-[type="search"] { -webkit-appearance: textfield; /* 1 */ outline-offset: -2px; /* 2 */ }
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
 ::-webkit-file-upload-button { -webkit-appearance: button; /* 1 */ font: inherit; /* 2 */ }
-/* Interactive
-   ========================================================================== */
 /*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-details { display: block; }
+Interactive
+===========
+*/
 /*
- * Add the correct display in all browsers.
- */
+Add the correct display in Chrome and Safari.
+*/
 summary { display: list-item; }
-/* Misc
-   ========================================================================== */
-/**
- * Add the correct display in IE 10+.
- */
-template { display: none; }
-/**
- * Add the correct display in IE 10.
- */
-[hidden] { display: none; }
 /* Variables */
 /* Importing here will allow you to override any variables in the modules */
 /*
@@ -222,17 +148,6 @@ template { display: none; }
 
 */
 /* Media Queries */
-/*
-
-   Tachyons
-   COLOR VARIABLES
-
-   A balanced color system optimized for accessibility
-   Theme generated with https://components.ai/theme
-
-   The first six steps in each scale are accessible with white 
-
-*/
 /* Modules */
 /*
  
@@ -258,16 +173,6 @@ template { display: none; }
 .aspect-ratio-7x5 { aspect-ratio: 7 / 5; }
 .aspect-ratio-5x7 { aspect-ratio: 5 / 7; }
 .aspect-ratio-square, .aspect-ratio-1x1 { aspect-ratio: 1 / 1; }
-/*
-
-   IMAGES
-   Docs: http://tachyons.io/docs/elements/images/
-
-*/
-img { display: block; max-width: 100%; }
-.random-image { background-image: url( https://source.unsplash.com/random/ ); background-size: cover; }
-.random-image-landscape { background-image: url( https://source.unsplash.com/random/1920x1080 ); background-size: cover; }
-.random-image-portrait { background-image: url( https://source.unsplash.com/random/1080x1920 ); background-size: cover; }
 /*
 
    BACKGROUND SIZE
@@ -374,11 +279,11 @@ img { display: block; max-width: 100%; }
 .b--inherit { border-color: inherit; }
 .b--initial { border-color: initial; }
 .b--unset { border-color: unset; }
+/* Variables */
 /*
 
    BORDER RADIUS
    Docs: http://tachyons.io/docs/themes/border-radius/
-   Interactive examples: https://components.ai/u/system/cl7crcjia022509masfvq73ny/cl7ztbozs1650909l6rllmvpko
 
    Base:
      br   = border-radius
@@ -394,7 +299,7 @@ img { display: block; max-width: 100%; }
 
    Literal values:
      -100 = 100%
-     -pill = 9999px
+     -pill = var(--border-radius-pill);
 
    Media Query Extensions:
      -s = small
@@ -735,6 +640,7 @@ img { display: block; max-width: 100%; }
 .end-14 { grid-column-end: 14; }
 .end-15 { grid-column-end: 15; }
 .end-16 { grid-column-end: 16; }
+.end-last { grid-column-end: -1; }
 /*
 
   Grid Row
@@ -1085,6 +991,8 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .vh-75 { height: 75vh; }
 .vh-100 { height: 100vh; }
 .min-vh-100 { min-height: 100vh; }
+/* Dynamic Screen Height Percentage */
+.dvh-100 { height: 100dvh; }
 /* String Properties */
 .h-auto { height: auto; }
 .h-inherit { height: inherit; }
@@ -1135,6 +1043,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 
 */
 .list { list-style-type: none; }
+/* Variables */
 /*
 
    MAX WIDTHS
@@ -1221,16 +1130,19 @@ code, .code { font-family: Consolas, monaco, monospace; }
 
 */
 /* Width Scale */
-.w1 { width: 1rem; }
-.w2 { width: 2rem; }
-.w3 { width: 4rem; }
-.w4 { width: 8rem; }
-.w5 { width: 16rem; }
 .w-10 { width: 10%; }
 .w-20 { width: 20%; }
 .w-25 { width: 25%; }
+.w-30 { width: 30%; }
+.w-33 { width: 33%; }
+.w-34 { width: 34%; }
+.w-40 { width: 40%; }
 .w-50 { width: 50%; }
+.w-60 { width: 60%; }
+.w-70 { width: 70%; }
 .w-75 { width: 75%; }
+.w-80 { width: 80%; }
+.w-90 { width: 90%; }
 .w-100 { width: 100%; }
 .w-third { width: 33.33333%; }
 .w-two-thirds { width: 66.66667%; }
@@ -1517,6 +1429,8 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .cyan-9 { color: var( --cyan-9 ); }
 .cyan-10 { color: var( --cyan-10 ); }
 .cyan-11 { color: var( --cyan-11 ); }
+.white { color: white; }
+.black { color: black; }
 /* Background colors */
 .bg-overlay-tint-0 { background-color: var( --overlay-tint-0 ); }
 .bg-overlay-tint-1 { background-color: var( --overlay-tint-1 ); }
@@ -1710,6 +1624,9 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .bg-cyan-9 { background-color: var( --cyan-9 ); }
 .bg-cyan-10 { background-color: var( --cyan-10 ); }
 .bg-cyan-11 { background-color: var( --cyan-11 ); }
+.bg-white { background-color: white; }
+.bg-black { background-color: black; }
+.bg-transparent { background-color: transparent; }
 /* 
   
    SKINS:PSEUDO
@@ -2501,7 +2418,6 @@ code, .code { font-family: Consolas, monaco, monospace; }
      m = margin
 
    Modifiers:
-     a = all
      v = vertical
      h = horizontal
      t = top
@@ -2658,7 +2574,6 @@ code, .code { font-family: Consolas, monaco, monospace; }
      n = negative
 
    Modifiers:
-     a = all
      t = top
      r = right
      b = bottom
@@ -2671,6 +2586,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
      5 = 5th step in spacing scale
      6 = 6th step in spacing scale
      7 = 7th step in spacing scale
+     8 = 8th step in spacing scale
 
    Media Query Extensions:
      -s = small
@@ -2678,13 +2594,14 @@ code, .code { font-family: Consolas, monaco, monospace; }
      -l = large
 
 */
-.na1 { margin: -0.25rem; }
-.na2 { margin: -0.5rem; }
-.na3 { margin: -1rem; }
-.na4 { margin: -2rem; }
-.na5 { margin: -4rem; }
-.na6 { margin: -8rem; }
-.na7 { margin: -16rem; }
+.n1 { margin: -0.25rem; }
+.n2 { margin: -0.5rem; }
+.n3 { margin: -1rem; }
+.n4 { margin: -2rem; }
+.n5 { margin: -4rem; }
+.n6 { margin: -8rem; }
+.n7 { margin: -16rem; }
+.n8 { margin: -32rem; }
 .nl1 { margin-left: -0.25rem; }
 .nl2 { margin-left: -0.5rem; }
 .nl3 { margin-left: -1rem; }
@@ -2692,6 +2609,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .nl5 { margin-left: -4rem; }
 .nl6 { margin-left: -8rem; }
 .nl7 { margin-left: -16rem; }
+.nl8 { margin-left: -32rem; }
 .nr1 { margin-right: -0.25rem; }
 .nr2 { margin-right: -0.5rem; }
 .nr3 { margin-right: -1rem; }
@@ -2699,6 +2617,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .nr5 { margin-right: -4rem; }
 .nr6 { margin-right: -8rem; }
 .nr7 { margin-right: -16rem; }
+.nr8 { margin-right: -32rem; }
 .nb1 { margin-bottom: -0.25rem; }
 .nb2 { margin-bottom: -0.5rem; }
 .nb3 { margin-bottom: -1rem; }
@@ -2706,6 +2625,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .nb5 { margin-bottom: -4rem; }
 .nb6 { margin-bottom: -8rem; }
 .nb7 { margin-bottom: -16rem; }
+.nb8 { margin-bottom: -32rem; }
 .nt1 { margin-top: -0.25rem; }
 .nt2 { margin-top: -0.5rem; }
 .nt3 { margin-top: -1rem; }
@@ -2713,6 +2633,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .nt5 { margin-top: -4rem; }
 .nt6 { margin-top: -8rem; }
 .nt7 { margin-top: -16rem; }
+.nt8 { margin-top: -32rem; }
 /* Variables */
 /*
 
@@ -2802,6 +2723,11 @@ code, .code { font-family: Consolas, monaco, monospace; }
      5 = 5th step in size scale
      6 = 6th step in size scale
      7 = 7th step in size scale
+     8 = 8th step in size scale
+     9 = 9th step in size scale
+     10 = 10th step in size scale
+     11 = 11th step in size scale
+     12 = 12th step in size scale
 
    Media Query Extensions:
      -s = small
@@ -2812,7 +2738,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .f1 { font-size: .75rem; }
 .f2 { font-size: .875rem; }
 .f3 { font-size: 1rem; }
-.f4 { font-size: 1.125rem; }
+.f4 { font-size: 1.25rem; }
 .f5 { font-size: 1.25rem; }
 .f6 { font-size: 1.5rem; }
 .f7 { font-size: 2rem; }
@@ -3049,6 +2975,117 @@ code, .code { font-family: Consolas, monaco, monospace; }
 
 */
 /* Debugging */
+/* 
+ 
+  DEBUG (PESTICIDE)
+  Docs: http://tachyons.io/docs/debug/
+
+  This is a partial you have to manually include in your
+  build file. It places a different colored outline on 
+  each element which can help you debug layout issues.
+  There is also a handy chrome extension that can 
+  be found at http://pesticide.io
+
+*/
+body { outline: 1px solid #2980b9 !important; }
+article { outline: 1px solid #3498db !important; }
+nav { outline: 1px solid #0088c3 !important; }
+aside { outline: 1px solid #33a0ce !important; }
+section { outline: 1px solid #66b8da !important; }
+header { outline: 1px solid #99cfe7 !important; }
+footer { outline: 1px solid #cce7f3 !important; }
+h1 { outline: 1px solid #162544 !important; }
+h2 { outline: 1px solid #314e6e !important; }
+h3 { outline: 1px solid #3e5e85 !important; }
+h4 { outline: 1px solid #449baf !important; }
+h5 { outline: 1px solid #c7d1cb !important; }
+h6 { outline: 1px solid #4371d0 !important; }
+main { outline: 1px solid #2f4f90 !important; }
+address { outline: 1px solid #1a2c51 !important; }
+div { outline: 1px solid #036cdb !important; }
+p { outline: 1px solid #ac050b !important; }
+hr { outline: 1px solid #ff063f !important; }
+pre { outline: 1px solid #850440 !important; }
+blockquote { outline: 1px solid #f1b8e7 !important; }
+ol { outline: 1px solid #ff050c !important; }
+ul { outline: 1px solid #d90416 !important; }
+li { outline: 1px solid #d90416 !important; }
+dl { outline: 1px solid #fd3427 !important; }
+dt { outline: 1px solid #ff0043 !important; }
+dd { outline: 1px solid #e80174 !important; }
+figure { outline: 1px solid #f0b !important; }
+figcaption { outline: 1px solid #bf0032 !important; }
+table { outline: 1px solid #0c9 !important; }
+caption { outline: 1px solid #37ffc4 !important; }
+thead { outline: 1px solid #98daca !important; }
+tbody { outline: 1px solid #64a7a0 !important; }
+tfoot { outline: 1px solid #22746b !important; }
+tr { outline: 1px solid #86c0b2 !important; }
+th { outline: 1px solid #a1e7d6 !important; }
+td { outline: 1px solid #3f5a54 !important; }
+col { outline: 1px solid #6c9a8f !important; }
+colgroup { outline: 1px solid #6c9a9d !important; }
+button { outline: 1px solid #da8301 !important; }
+datalist { outline: 1px solid #c06000 !important; }
+fieldset { outline: 1px solid #d95100 !important; }
+form { outline: 1px solid #d23600 !important; }
+input { outline: 1px solid #fca600 !important; }
+keygen { outline: 1px solid #b31e00 !important; }
+label { outline: 1px solid #ee8900 !important; }
+legend { outline: 1px solid #de6d00 !important; }
+meter { outline: 1px solid #e8630c !important; }
+optgroup { outline: 1px solid #b33600 !important; }
+option { outline: 1px solid #ff8a00 !important; }
+output { outline: 1px solid #ff9619 !important; }
+progress { outline: 1px solid #e57c00 !important; }
+select { outline: 1px solid #e26e0f !important; }
+textarea { outline: 1px solid #cc5400 !important; }
+details { outline: 1px solid #33848f !important; }
+summary { outline: 1px solid #60a1a6 !important; }
+command { outline: 1px solid #438da1 !important; }
+menu { outline: 1px solid #449da6 !important; }
+del { outline: 1px solid #bf0000 !important; }
+ins { outline: 1px solid #400000 !important; }
+img { outline: 1px solid #22746b !important; }
+iframe { outline: 1px solid #64a7a0 !important; }
+embed { outline: 1px solid #98daca !important; }
+object { outline: 1px solid #0c9 !important; }
+param { outline: 1px solid #37ffc4 !important; }
+video { outline: 1px solid #6ee866 !important; }
+audio { outline: 1px solid #027353 !important; }
+source { outline: 1px solid #012426 !important; }
+canvas { outline: 1px solid #a2f570 !important; }
+track { outline: 1px solid #59a600 !important; }
+map { outline: 1px solid #7be500 !important; }
+area { outline: 1px solid #305900 !important; }
+a { outline: 1px solid #ff62ab !important; }
+em { outline: 1px solid #800b41 !important; }
+strong { outline: 1px solid #ff1583 !important; }
+i { outline: 1px solid #803156 !important; }
+b { outline: 1px solid #cc1169 !important; }
+u { outline: 1px solid #ff0430 !important; }
+s { outline: 1px solid #f805e3 !important; }
+small { outline: 1px solid #d107b2 !important; }
+abbr { outline: 1px solid #4a0263 !important; }
+q { outline: 1px solid #240018 !important; }
+cite { outline: 1px solid #64003c !important; }
+dfn { outline: 1px solid #b4005a !important; }
+sub { outline: 1px solid #dba0c8 !important; }
+sup { outline: 1px solid #cc0256 !important; }
+time { outline: 1px solid #d6606d !important; }
+code { outline: 1px solid #e04251 !important; }
+kbd { outline: 1px solid #5e001f !important; }
+samp { outline: 1px solid #9c0033 !important; }
+var { outline: 1px solid #d90047 !important; }
+mark { outline: 1px solid #ff0053 !important; }
+bdi { outline: 1px solid #bf3668 !important; }
+bdo { outline: 1px solid #6f1400 !important; }
+ruby { outline: 1px solid #ff7b93 !important; }
+rt { outline: 1px solid #ff2f54 !important; }
+rp { outline: 1px solid #803e49 !important; }
+span { outline: 1px solid #cc2643 !important; }
+br { outline: 1px solid #db687d !important; }
+wbr { outline: 1px solid #db175b !important; }
 /*
 
   DEBUG CHILDREN
@@ -3276,6 +3313,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .end-14-s { grid-column-end: 14; }
  .end-15-s { grid-column-end: 15; }
  .end-16-s { grid-column-end: 16; }
+ .end-last-s { grid-column-end: -1; }
  .row-auto-s { grid-row: auto; }
  .row-start-1-s { grid-row-start: 1; }
  .row-start-2-s { grid-row-start: 2; }
@@ -3387,6 +3425,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .vh-75-s { height: 75vh; }
  .vh-100-s { height: 100vh; }
  .min-vh-100-s { min-height: 100vh; }
+ .dvh-100-s { height: 100dvh; }
  .h-auto-s { height: auto; }
  .h-inherit-s { height: inherit; }
  .tracked-s { letter-spacing: .1em; }
@@ -3406,16 +3445,19 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .mw8-s { max-width: 64rem; }
  .mw9-s { max-width: 96rem; }
  .mw-none-s { max-width: none; }
- .w1-s { width: 1rem; }
- .w2-s { width: 2rem; }
- .w3-s { width: 4rem; }
- .w4-s { width: 8rem; }
- .w5-s { width: 16rem; }
  .w-10-s { width: 10%; }
  .w-20-s { width: 20%; }
  .w-25-s { width: 25%; }
+ .w-30-s { width: 30%; }
+ .w-33-s { width: 33%; }
+ .w-34-s { width: 34%; }
+ .w-40-s { width: 40%; }
  .w-50-s { width: 50%; }
+ .w-60-s { width: 60%; }
+ .w-70-s { width: 70%; }
  .w-75-s { width: 75%; }
+ .w-80-s { width: 80%; }
+ .w-90-s { width: 90%; }
  .w-100-s { width: 100%; }
  .w-third-s { width: 33.33333%; }
  .w-two-thirds-s { width: 66.66667%; }
@@ -3569,6 +3611,47 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .mh6-s { margin-left: 8rem; margin-right: 8rem; }
  .mh7-s { margin-left: 16rem; margin-right: 16rem; }
  .mh8-s { margin-left: 32rem; margin-right: 32rem; }
+ .n0-s { margin: 0; }
+ .n1-s { margin: -0.25rem; }
+ .n2-s { margin: -0.5rem; }
+ .n3-s { margin: -1rem; }
+ .n4-s { margin: -2rem; }
+ .n5-s { margin: -4rem; }
+ .n6-s { margin: -8rem; }
+ .n7-s { margin: -16rem; }
+ .n8-s { margin: -32rem; }
+ .nl1-s { margin-left: -0.25rem; }
+ .nl2-s { margin-left: -0.5rem; }
+ .nl3-s { margin-left: -1rem; }
+ .nl4-s { margin-left: -2rem; }
+ .nl5-s { margin-left: -4rem; }
+ .nl6-s { margin-left: -8rem; }
+ .nl7-s { margin-left: -16rem; }
+ .nl8-s { margin-left: -32rem; }
+ .nr1-s { margin-right: -0.25rem; }
+ .nr2-s { margin-right: -0.5rem; }
+ .nr3-s { margin-right: -1rem; }
+ .nr4-s { margin-right: -2rem; }
+ .nr5-s { margin-right: -4rem; }
+ .nr6-s { margin-right: -8rem; }
+ .nr7-s { margin-right: -16rem; }
+ .nr8-s { margin-right: -32rem; }
+ .nb1-s { margin-bottom: -0.25rem; }
+ .nb2-s { margin-bottom: -0.5rem; }
+ .nb3-s { margin-bottom: -1rem; }
+ .nb4-s { margin-bottom: -2rem; }
+ .nb5-s { margin-bottom: -4rem; }
+ .nb6-s { margin-bottom: -8rem; }
+ .nb7-s { margin-bottom: -16rem; }
+ .nb8-s { margin-bottom: -32rem; }
+ .nt1-s { margin-top: -0.25rem; }
+ .nt2-s { margin-top: -0.5rem; }
+ .nt3-s { margin-top: -1rem; }
+ .nt4-s { margin-top: -2rem; }
+ .nt5-s { margin-top: -4rem; }
+ .nt6-s { margin-top: -8rem; }
+ .nt7-s { margin-top: -16rem; }
+ .nt8-s { margin-top: -32rem; }
  .tl-s { text-align: left; }
  .tr-s { text-align: right; }
  .tc-s { text-align: center; }
@@ -3580,7 +3663,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .f1-s { font-size: .75rem; }
  .f2-s { font-size: .875rem; }
  .f3-s { font-size: 1rem; }
- .f4-s { font-size: 1.125rem; }
+ .f4-s { font-size: 1.25rem; }
  .f5-s { font-size: 1.25rem; }
  .f6-s { font-size: 1.5rem; }
  .f7-s { font-size: 2rem; }
@@ -3775,21 +3858,21 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .col-center3-m { grid-column: 4 / -4; }
  .col-center4-m { grid-column: 6 / -6; }
  .col-auto-m { grid-column: auto; }
- .start-1-m { grid-column-mtart: 1; }
- .start-2-m { grid-column-mtart: 2; }
- .start-3-m { grid-column-mtart: 3; }
- .start-4-m { grid-column-mtart: 4; }
- .start-5-m { grid-column-mtart: 5; }
- .start-6-m { grid-column-mtart: 6; }
- .start-7-m { grid-column-mtart: 7; }
- .start-8-m { grid-column-mtart: 8; }
- .start-9-m { grid-column-mtart: 9; }
- .start-10-m { grid-column-mtart: 10; }
- .start-11-m { grid-column-mtart: 11; }
- .start-12-m { grid-column-mtart: 12; }
- .start-13-m { grid-column-mtart: 13; }
- .start-14-m { grid-column-mtart: 14; }
- .start-15-m { grid-column-mtart: 15; }
+ .start-1-m { grid-column-start: 1; }
+ .start-2-m { grid-column-start: 2; }
+ .start-3-m { grid-column-start: 3; }
+ .start-4-m { grid-column-start: 4; }
+ .start-5-m { grid-column-start: 5; }
+ .start-6-m { grid-column-start: 6; }
+ .start-7-m { grid-column-start: 7; }
+ .start-8-m { grid-column-start: 8; }
+ .start-9-m { grid-column-start: 9; }
+ .start-10-m { grid-column-start: 10; }
+ .start-11-m { grid-column-start: 11; }
+ .start-12-m { grid-column-start: 12; }
+ .start-13-m { grid-column-start: 13; }
+ .start-14-m { grid-column-start: 14; }
+ .start-15-m { grid-column-start: 15; }
  .end-1-m { grid-column-end: 1; }
  .end-2-m { grid-column-end: 2; }
  .end-3-m { grid-column-end: 3; }
@@ -3806,6 +3889,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .end-14-m { grid-column-end: 14; }
  .end-15-m { grid-column-end: 15; }
  .end-16-m { grid-column-end: 16; }
+ .end-last-m { grid-column-end: -1; }
  .row-auto-m { grid-row: auto; }
  .row-start-1-m { grid-row-start: 1; }
  .row-start-2-m { grid-row-start: 2; }
@@ -3917,6 +4001,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .vh-75-m { height: 75vh; }
  .vh-100-m { height: 100vh; }
  .min-vh-100-m { min-height: 100vh; }
+ .dvh-100-m { height: 100dvh; }
  .h-auto-m { height: auto; }
  .h-inherit-m { height: inherit; }
  .tracked-m { letter-spacing: .1em; }
@@ -3936,16 +4021,19 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .mw8-m { max-width: 64rem; }
  .mw9-m { max-width: 96rem; }
  .mw-none-m { max-width: none; }
- .w1-m { width: 1rem; }
- .w2-m { width: 2rem; }
- .w3-m { width: 4rem; }
- .w4-m { width: 8rem; }
- .w5-m { width: 16rem; }
  .w-10-m { width: 10%; }
  .w-20-m { width: 20%; }
  .w-25-m { width: 25%; }
+ .w-30-m { width: 30%; }
+ .w-33-m { width: 33%; }
+ .w-34-m { width: 34%; }
+ .w-40-m { width: 40%; }
  .w-50-m { width: 50%; }
+ .w-60-m { width: 60%; }
+ .w-70-m { width: 70%; }
  .w-75-m { width: 75%; }
+ .w-80-m { width: 80%; }
+ .w-90-m { width: 90%; }
  .w-100-m { width: 100%; }
  .w-third-m { width: 33.33333%; }
  .w-two-thirds-m { width: 66.66667%; }
@@ -4100,6 +4188,47 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .mh6-m { margin-left: 8rem; margin-right: 8rem; }
  .mh7-m { margin-left: 16rem; margin-right: 16rem; }
  .mh8-m { margin-left: 32rem; margin-right: 32rem; }
+ .n0-m { margin: 0; }
+ .n1-m { margin: -0.25rem; }
+ .n2-m { margin: -0.5rem; }
+ .n3-m { margin: -1rem; }
+ .n4-m { margin: -2rem; }
+ .n5-m { margin: -4rem; }
+ .n6-m { margin: -8rem; }
+ .n7-m { margin: -16rem; }
+ .n8-m { margin: -32rem; }
+ .nl1-m { margin-left: -0.25rem; }
+ .nl2-m { margin-left: -0.5rem; }
+ .nl3-m { margin-left: -1rem; }
+ .nl4-m { margin-left: -2rem; }
+ .nl5-m { margin-left: -4rem; }
+ .nl6-m { margin-left: -8rem; }
+ .nl7-m { margin-left: -16rem; }
+ .nl8-m { margin-left: -32rem; }
+ .nr1-m { margin-right: -0.25rem; }
+ .nr2-m { margin-right: -0.5rem; }
+ .nr3-m { margin-right: -1rem; }
+ .nr4-m { margin-right: -2rem; }
+ .nr5-m { margin-right: -4rem; }
+ .nr6-m { margin-right: -8rem; }
+ .nr7-m { margin-right: -16rem; }
+ .nr8-m { margin-right: -32rem; }
+ .nb1-m { margin-bottom: -0.25rem; }
+ .nb2-m { margin-bottom: -0.5rem; }
+ .nb3-m { margin-bottom: -1rem; }
+ .nb4-m { margin-bottom: -2rem; }
+ .nb5-m { margin-bottom: -4rem; }
+ .nb6-m { margin-bottom: -8rem; }
+ .nb7-m { margin-bottom: -16rem; }
+ .nb8-m { margin-bottom: -32rem; }
+ .nt1-m { margin-top: -0.25rem; }
+ .nt2-m { margin-top: -0.5rem; }
+ .nt3-m { margin-top: -1rem; }
+ .nt4-m { margin-top: -2rem; }
+ .nt5-m { margin-top: -4rem; }
+ .nt6-m { margin-top: -8rem; }
+ .nt7-m { margin-top: -16rem; }
+ .nt8-m { margin-top: -32rem; }
  .tl-m { text-align: left; }
  .tr-m { text-align: right; }
  .tc-m { text-align: center; }
@@ -4111,7 +4240,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .f1-m { font-size: .75rem; }
  .f2-m { font-size: .875rem; }
  .f3-m { font-size: 1rem; }
- .f4-m { font-size: 1.125rem; }
+ .f4-m { font-size: 1.25rem; }
  .f5-m { font-size: 1.25rem; }
  .f6-m { font-size: 1.5rem; }
  .f7-m { font-size: 2rem; }
@@ -4337,6 +4466,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .end-14-l { grid-column-end: 14; }
  .end-15-l { grid-column-end: 15; }
  .end-16-l { grid-column-end: 16; }
+ .end-last-l { grid-column-end: -1; }
  .row-auto-l { grid-row: auto; }
  .row-start-1-l { grid-row-start: 1; }
  .row-start-2-l { grid-row-start: 2; }
@@ -4448,6 +4578,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .vh-75-l { height: 75vh; }
  .vh-100-l { height: 100vh; }
  .min-vh-100-l { min-height: 100vh; }
+ .dvh-100-l { height: 100dvh; }
  .h-auto-l { height: auto; }
  .h-inherit-l { height: inherit; }
  .tracked-l { letter-spacing: .1em; }
@@ -4467,16 +4598,19 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .mw8-l { max-width: 64rem; }
  .mw9-l { max-width: 96rem; }
  .mw-none-l { max-width: none; }
- .w1-l { width: 1rem; }
- .w2-l { width: 2rem; }
- .w3-l { width: 4rem; }
- .w4-l { width: 8rem; }
- .w5-l { width: 16rem; }
  .w-10-l { width: 10%; }
  .w-20-l { width: 20%; }
  .w-25-l { width: 25%; }
+ .w-30-l { width: 30%; }
+ .w-33-l { width: 33%; }
+ .w-34-l { width: 34%; }
+ .w-40-l { width: 40%; }
  .w-50-l { width: 50%; }
+ .w-60-l { width: 60%; }
+ .w-70-l { width: 70%; }
  .w-75-l { width: 75%; }
+ .w-80-l { width: 80%; }
+ .w-90-l { width: 90%; }
  .w-100-l { width: 100%; }
  .w-third-l { width: 33.33333%; }
  .w-two-thirds-l { width: 66.66667%; }
@@ -4631,13 +4765,15 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .mh6-l { margin-left: 8rem; margin-right: 8rem; }
  .mh7-l { margin-left: 16rem; margin-right: 16rem; }
  .mh8-l { margin-left: 32rem; margin-right: 32rem; }
- .na1-l { margin: -0.25rem; }
- .na2-l { margin: -0.5rem; }
- .na3-l { margin: -1rem; }
- .na4-l { margin: -2rem; }
- .na5-l { margin: -4rem; }
- .na6-l { margin: -8rem; }
- .na7-l { margin: -16rem; }
+ .n0-l { margin: 0; }
+ .n1-l { margin: -0.25rem; }
+ .n2-l { margin: -0.5rem; }
+ .n3-l { margin: -1rem; }
+ .n4-l { margin: -2rem; }
+ .n5-l { margin: -4rem; }
+ .n6-l { margin: -8rem; }
+ .n7-l { margin: -16rem; }
+ .n8-l { margin: -32rem; }
  .nl1-l { margin-left: -0.25rem; }
  .nl2-l { margin-left: -0.5rem; }
  .nl3-l { margin-left: -1rem; }
@@ -4645,6 +4781,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .nl5-l { margin-left: -4rem; }
  .nl6-l { margin-left: -8rem; }
  .nl7-l { margin-left: -16rem; }
+ .nl8-l { margin-left: -32rem; }
  .nr1-l { margin-right: -0.25rem; }
  .nr2-l { margin-right: -0.5rem; }
  .nr3-l { margin-right: -1rem; }
@@ -4652,6 +4789,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .nr5-l { margin-right: -4rem; }
  .nr6-l { margin-right: -8rem; }
  .nr7-l { margin-right: -16rem; }
+ .nr8-l { margin-right: -32rem; }
  .nb1-l { margin-bottom: -0.25rem; }
  .nb2-l { margin-bottom: -0.5rem; }
  .nb3-l { margin-bottom: -1rem; }
@@ -4659,6 +4797,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .nb5-l { margin-bottom: -4rem; }
  .nb6-l { margin-bottom: -8rem; }
  .nb7-l { margin-bottom: -16rem; }
+ .nb8-l { margin-bottom: -32rem; }
  .nt1-l { margin-top: -0.25rem; }
  .nt2-l { margin-top: -0.5rem; }
  .nt3-l { margin-top: -1rem; }
@@ -4666,6 +4805,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .nt5-l { margin-top: -4rem; }
  .nt6-l { margin-top: -8rem; }
  .nt7-l { margin-top: -16rem; }
+ .nt8-l { margin-top: -32rem; }
  .tl-l { text-align: left; }
  .tr-l { text-align: right; }
  .tc-l { text-align: center; }
@@ -4677,7 +4817,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
  .f1-l { font-size: .75rem; }
  .f2-l { font-size: .875rem; }
  .f3-l { font-size: 1rem; }
- .f4-l { font-size: 1.125rem; }
+ .f4-l { font-size: 1.25rem; }
  .f5-l { font-size: 1.25rem; }
  .f6-l { font-size: 1.5rem; }
  .f7-l { font-size: 2rem; }
